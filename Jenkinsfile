@@ -42,7 +42,7 @@ node("cicd-build-slaves") {
         //stage("DOCKER BUILD") {
           // BUILD AND PUSH IMAGE TO DOCKERHUB
           docker.withRegistry("https://index.docker.io/v1/","cba2f3ad-7020-45db-9dc1-cd371a11fd85") {
-            def app = docker.build("vdigital/simpliqa4:${commit_id}","../.").push()
+            def app = docker.build("vdigital/simpliqa4:${commit_id}",".").push()
           }
         //}
       //}
